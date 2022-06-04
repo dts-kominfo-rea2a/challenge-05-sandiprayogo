@@ -1,4 +1,4 @@
-const names = ["Halo", "Sandi", "Azam", "Syarif", "Rizal"];
+const names = ["Halo", "Angel", "Nyoman", "Ketut", "Aisyah"];
 
 // TODO: Fungsi utama
 // Menerima 2 parameter: list nama dan callback sort
@@ -6,34 +6,26 @@ const names = ["Halo", "Sandi", "Azam", "Syarif", "Rizal"];
 // "1. Nama"
 // "2. Nama"
 // ...
-const sorter = (arr, fnSort) => {
-  // invoke function sorter
-  sortData = fnSort(arr);
-
-  // make numbered list from sorted Data
+const sorter = (list, sortFunc) => {
+  sortList = sortFunc(list);
   let data = [];
-  for (let i = 0; i < sortData.length; i++) {
-    // data Looping
-    let loop = "";
-    loop += i + 1 + ". " + sortData[i];
-    // add to array
-    data.push(loop);
+  for (var i = 0; i < names.length; i++) {
+    data.push(`${i + 1}. ${names[i]}`);
   }
-
   return data;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara ascending
 // mengembalikan array yang sudah diurutkan
-const sortAscending = (arr) => {
-  let data = arr.sort();
+const sortAscending = (list) => {
+  let data = list.sort();
   return data;
 };
 
 // TODO: Fungsi untuk mengurutkan array of string secara descending
 // mengembalikan array yang sudah diurutkan
-const sortDescending = (arr) => {
-  let data = arr.sort().reverse();
+const sortDescending = (list) => {
+  let data = list.sort().reverse();
   return data;
 };
 
